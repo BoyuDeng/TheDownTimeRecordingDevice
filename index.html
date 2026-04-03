@@ -14,14 +14,15 @@
 
       <section class="controls">
         <label for="incidentInput">Incident details / 故障信息</label>
+        <p class="hint">1) Press Start first to begin timing. 2) Type any notes (English/中文). 3) Press same button again to stop and auto-sort.</p>
         <textarea
           id="incidentInput"
-          placeholder="Example:\n停线时间：14:20-14:25\n故障工位：STNR10工位RB01\n故障原因：甲方来料二维码出错\n\nOr:\nProcess Step: STNR10 RB01\nCause: QR code issue"
+          placeholder="You can type anything, for example:\n故障工位：STNR10工位RB01\n故障原因：甲方来料二维码出错\n\nOr free text:\nSTNR10 RB01 QR code error, line stop due to incoming material"
           rows="7"
         ></textarea>
 
         <div class="button-row">
-          <button id="toggleIncidentBtn" type="button">Start Incident / 开始停线</button>
+          <button id="toggleIncidentBtn" type="button">Start Incident Timing / 开始计时</button>
           <button id="exportBtn" type="button">Export Excel / 导出Excel</button>
         </div>
 
