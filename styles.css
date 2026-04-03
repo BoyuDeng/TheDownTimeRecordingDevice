@@ -1,0 +1,96 @@
+:root {
+  color-scheme: light;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f4f6f9;
+  color: #222;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 1.5rem auto;
+  padding: 1.25rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 1.6rem;
+}
+
+.controls {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.hint {
+  margin: 0;
+  color: #5f6b7a;
+  font-size: 0.9rem;
+}
+
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ccd3dd;
+  border-radius: 8px;
+  padding: 0.75rem;
+  resize: vertical;
+  font-size: 0.95rem;
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 0.65rem 1rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+#toggleIncidentBtn {
+  background: #0b74de;
+  color: #fff;
+}
+
+#exportBtn {
+  background: #17803d;
+  color: #fff;
+}
+
+.status {
+  margin: 0;
+  color: #4e5a6a;
+  font-weight: 600;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #d8dee9;
+  padding: 0.5rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background: #edf3fb;
+}
