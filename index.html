@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Production Downtime Recorder</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <main class="container">
+      <h1>Production Downtime Recorder / 停线记录</h1>
+
+      <section class="controls">
+        <p class="hint">1) Press Start to begin timing. 2) Fill each field manually. 3) Press Stop & Save to store record.</p>
+
+        <div class="input-grid">
+          <label>Process Step<input id="processStepInput" type="text" placeholder="e.g. STNR10 RB01" /></label>
+          <label>Failure Mode<input id="failureModeInput" type="text" placeholder="e.g. Communication interruption" /></label>
+          <label>Effect<input id="effectInput" type="text" placeholder="e.g. Line stop" value="Line stop" /></label>
+          <label>Cause<input id="causeInput" type="text" placeholder="e.g. QR code issue" /></label>
+          <label>Detection<input id="detectionInput" type="text" placeholder="e.g. System alarm" /></label>
+          <label>Action<input id="actionInput" type="text" placeholder="e.g. Check network/connection" /></label>
+        </div>
+
+        <div class="button-row">
+          <button id="toggleIncidentBtn" type="button">Start Incident Timing / 开始计时</button>
+          <button id="exportBtn" type="button">Export Excel / 导出Excel</button>
+        </div>
+
+        <p id="statusText" class="status">No active incident.</p>
+      </section>
+
+      <section>
+        <h2>Recorded incidents</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Downtime</th>
+                <th>Process Step</th>
+                <th>Failure Mode</th>
+                <th>Effect</th>
+                <th>Cause</th>
+                <th>Detection</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="incidentTableBody"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
