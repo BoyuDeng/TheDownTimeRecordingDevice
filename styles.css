@@ -34,13 +34,23 @@ h1 {
   font-size: 0.9rem;
 }
 
-textarea {
-  width: 100%;
-  box-sizing: border-box;
+.input-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0.75rem;
+}
+
+.input-grid label {
+  display: grid;
+  gap: 0.35rem;
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+.input-grid input {
   border: 1px solid #ccd3dd;
   border-radius: 8px;
-  padding: 0.75rem;
-  resize: vertical;
+  padding: 0.6rem 0.7rem;
   font-size: 0.95rem;
 }
 
